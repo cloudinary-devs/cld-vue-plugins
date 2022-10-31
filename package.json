@@ -1,5 +1,5 @@
 {
-  "name": "cld-vue3-sdk-quick-start",
+  "name": "cld-vue-sdk-plugins",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
