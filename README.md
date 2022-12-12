@@ -1,5 +1,5 @@
 # cld-vue-plugins
-Vue app to demonstrate the Cloudinary Vue plugins for the AdvancedImage component
+Vue.js app to demonstrate the Cloudinary Vue.js plugins for the AdvancedImage component
 
 ## Project Setup
 

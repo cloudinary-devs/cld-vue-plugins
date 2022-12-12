@@ -9,7 +9,7 @@ import LazyLoadPlaceholder from './components/LazyLoadPlaceholder.vue';
 
 <template>
   <div class="App-body">
-  <h1>Vue Plugins</h1>
+  <h1>Vue.js Plugins</h1>
   </div>
   <DefaultAdvancedImage />
   <div class="spacer"></div>
