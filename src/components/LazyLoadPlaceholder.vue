@@ -1,4 +1,4 @@
-<script>
+<script setup>
 import { AdvancedImage, lazyload, placeholder } from '@cloudinary/vue';
 import { Cloudinary } from '@cloudinary/url-gen';
 
@@ -12,17 +12,9 @@ const cld = new Cloudinary({
 // Instantiate a CloudinaryImage object for the image with the public ID, 'oil'.
 const myImage = cld.image('oil');
 
-export default {
-  components: {
-    AdvancedImage,
-  },
-  data() {
-    return {
-        plugins: [lazyload(), placeholder()],
-        myImage,
-    };
-  },
-};
+// Define plugins for lazyloading and placeholder.
+const plugins = [lazyload(), placeholder()];
+
 </script>
 
 <template>
@@ -30,6 +22,6 @@ export default {
     <h3>Using lazyload and placeholder</h3>
     <p>Scroll down to see image lazy load with placeholder</p>
     <div class="bigspacer"></div>
-    <AdvancedImage :cldImg="myImage" :plugins="plugins"/>
+    <AdvancedImage :cldImg="myImage" :plugins="plugins" />
   </div>
 </template>

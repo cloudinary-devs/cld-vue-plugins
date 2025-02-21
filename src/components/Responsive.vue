@@ -1,4 +1,4 @@
-<script>
+<script setup>
 import { AdvancedImage, responsive } from '@cloudinary/vue';
 import { Cloudinary } from '@cloudinary/url-gen';
 
@@ -12,23 +12,15 @@ const cld = new Cloudinary({
 // Instantiate a CloudinaryImage object for the image with the public ID, 'sample'.
 const myImage = cld.image('sample');
 
-export default {
-  components: {
-    AdvancedImage,
-  },
-  data() {
-    return {
-        plugins: [responsive({steps: 100})],
-        myImage,
-    };
-  },
-};
+// Define plugins with responsive step size of 100px.
+const plugins = [responsive({ steps: 100 })];
+
 </script>
 
 <template>
   <div class="App-body">
     <h3>Using responsive</h3>
     <p>Resize window to see changes (100 is the step size in px)</p>
-    <AdvancedImage :cldImg="myImage" :plugins="plugins"/>
+    <AdvancedImage :cldImg="myImage" :plugins="plugins" />
   </div>
 </template>

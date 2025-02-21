@@ -1,4 +1,4 @@
-<script>
+<script setup>
 import { AdvancedImage, accessibility } from '@cloudinary/vue';
 import { Cloudinary } from '@cloudinary/url-gen';
 
@@ -12,22 +12,14 @@ const cld = new Cloudinary({
 // Instantiate a CloudinaryImage object for the image with the public ID, 'sample'.
 const myImage = cld.image('sample');
 
-export default {
-  components: {
-    AdvancedImage,
-  },
-  data() {
-    return {
-        plugins: [accessibility({mode: 'colorblind'})],
-        myImage,
-    };
-  },
-};
+// Define plugins for accessibility.
+const plugins = [accessibility({ mode: 'colorblind' })];
+
 </script>
 
 <template>
   <div class="App-body">
     <h3>Using colorblind accessibility</h3>
-    <AdvancedImage :cldImg="myImage" :plugins="plugins"/>
+    <AdvancedImage :cldImg="myImage" :plugins="plugins" />
   </div>
 </template>
